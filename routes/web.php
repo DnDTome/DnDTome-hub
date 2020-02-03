@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// TODO: Move this to api routes file when going spa
+Route::resource('tasks', 'TaskController');
