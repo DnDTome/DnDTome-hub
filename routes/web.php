@@ -19,5 +19,6 @@
 //
 //Route::get('/home', 'HomeController@index')->name('home');
 
+//This is the only route we need, SPA routing will be handled by react router
 Route::view('/{path?}', 'index');
 
