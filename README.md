@@ -22,7 +22,7 @@ Run `cp php-worker/supervisord.d/laravel-scheduler.conf.example laradock/php-wor
 
 Run `cp php-worker/supervisord.d/laravel-worker.conf.example php-worker/supervisord.d/laravel-worker.conf`
 
-Run `docker-compose up -d nginx mariadb redis phpmyadmin php-worker`
+Run `docker-compose up -d nginx mariadb redis phpmyadmin php-worker workspace`
 
 Run `docker-compose exec --user=laradock workspace bash`
 
@@ -34,13 +34,13 @@ In you ide in Root dir copy .env.example to .env (if .env doesnt exists create i
 
 Back in the terminal
 
-Run `php artisan jwt:secret`
+Run `php artisan passport:install`
 
 Run `php artisan migrate`
 
 
 ### `Next Time`
 
-Run `docker-compose up -d nginx mariadb redis phpmyadmin php-worker`
+Run `docker-compose up -d nginx mariadb redis phpmyadmin php-worker workspace`
 
 Run `docker-compose exec --user=laradock workspace bash`
