@@ -13,9 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('register', 'UserController@register');
-Route::post('login', 'UserController@authenticate');
-
-Route::group(['middleware' => ['jwt.verify']], function() {
-    Route::get('user', 'UserController@getAuthenticatedUser');
+Route::prefix('v1')->group(function(){
+    Route::post('login', 'Api\AuthController@login');
+    Route::post('register', 'Api\AuthController@register');
+    Route::group(['middleware' => 'auth:api'], function(){
+        Route::post('getUser', 'Api\AuthController@getUser');
+    });
 });
