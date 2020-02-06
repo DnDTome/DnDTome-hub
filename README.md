@@ -34,10 +34,9 @@ In you ide in Root dir copy .env.example to .env (if .env doesnt exists create i
 
 Back in the terminal
 
-Run `php artisan passport:install`
-
 Run `php artisan migrate`
 
+Run `php artisan passport:install`
 
 ### `Next Time`
 

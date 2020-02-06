@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Controllers\Api;
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Validator;
 
 class AuthController extends Controller
 {
