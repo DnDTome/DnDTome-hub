@@ -6,7 +6,9 @@ This is the API project for DnDTome Hub.
 
 ### `Local Development`
 
-The project runs on docker from laradock
+The project runs on docker from laradock. Laradock are added as a submodule, so before starting
+
+Run `git submodule update` - this will pull down the laradock repo instead of folder being an empty reference
 
 First time you run the project do the following
 
